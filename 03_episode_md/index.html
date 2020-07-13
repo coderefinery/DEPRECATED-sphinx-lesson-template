@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Markdown example &mdash; Sphinx-lesson template  documentation</title>
+  <title>Markdown episode example &mdash; Sphinx-lesson template  documentation</title>
   
 
   
@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="Try executing code cells in markdown" href="../04_executing/" />
-    <link rel="prev" title="ReST example" href="../02_episode_rst/" /> 
+    <link rel="prev" title="ReST episode example" href="../02_episode_rst/" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,11 +95,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../01_intro/">Introduction episode (rst)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../01_intro_md/">Introduction episode (md)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_episode_rst/">ReST example</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Markdown example</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#native-markdown-blocks">Native markdown blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#markdown-format-from-old-lessons-that-doesn-t-work-with-myst-parser">markdown format from old lessons, that doesn’t work with myst_parser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sample-block-in-old-markdown-format-that-doesn-t-work">Sample block in old markdown format, that doesn’t work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_episode_rst/">ReST episode example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Markdown episode example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#section">Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wrap-up">Wrap-up</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../04_executing/">Try executing code cells in markdown</a></li>
@@ -155,7 +154,7 @@
     
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Markdown example</li>
+      <li>Markdown episode example</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,39 +173,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="markdown-example">
-<h1>Markdown example<a class="headerlink" href="#markdown-example" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="native-markdown-blocks">
-<h2>Native markdown blocks<a class="headerlink" href="#native-markdown-blocks" title="Permalink to this headline">¶</a></h2>
-<p>This is a native challenge block, using myst_parser and sphinx directives</p>
-<div class="admonition-this-is-a-challenge challenge admonition">
-<p class="admonition-title">This is a challenge</p>
-<p>This has css class <code class="docutils literal notranslate"><span class="pre">challenge</span></code>.</p>
-<p>What do you think will be the outcome if you
-stage a file and then edit it and stage it again, do this several times and
-at the end perform a commit? (think of focusing several scenes and pressing the
-shoot button only at the end)</p>
+  <div class="section" id="markdown-episode-example">
+<h1>Markdown episode example<a class="headerlink" href="#markdown-episode-example" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-questions questions admonition">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>Question 1</p></li>
+<li><p>Questin 2</p></li>
+</ul>
 </div>
-<p>It is implemented as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   ```{challenge} This is a challenge
-
-   content
-   &gt;```
+<div class="admonition-objectives objectives admonition">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Objective bullet points</p></li>
+<li><p>For the whole lesson</p></li>
+</ul>
+</div>
+<p>Introduction</p>
+<div class="section" id="section">
+<h2>Section<a class="headerlink" href="#section" title="Permalink to this headline">¶</a></h2>
+<p><em>Italics</em>, <strong>bold</strong>, <code class="docutils literal notranslate"><span class="pre">literal</span></code>.  <a class="reference internal" href="../02_episode_rst/"><span class="doc std std-doc">link to rst example</span></a>.</p>
+<p>Here we have some code:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">code</span>
+<span class="go">code</span>
+<span class="go">code</span>
 </pre></div>
 </div>
-<p>TODO: how to have nested code fences - the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> shouldn’t be above but
-I can’t make them nested?</p>
+<p>Here we have some console commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+$ command
+output
+$command
+</pre></div>
 </div>
-<div class="section" id="markdown-format-from-old-lessons-that-doesn-t-work-with-myst-parser">
-<h2>markdown format from old lessons, that doesn’t work with myst_parser<a class="headerlink" href="#markdown-format-from-old-lessons-that-doesn-t-work-with-myst-parser" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-challenge challenge admonition">
+<p class="admonition-title">Challenge</p>
+<p>This is an exercise</p>
 </div>
-<div class="section" id="sample-block-in-old-markdown-format-that-doesn-t-work">
-<h2>Sample block in old markdown format, that doesn’t work<a class="headerlink" href="#sample-block-in-old-markdown-format-that-doesn-t-work" title="Permalink to this headline">¶</a></h2>
-<p>What do you think will be the outcome if you
-stage a file and then edit it and stage it again, do this several times and
-at the end perform a commit? (think of focusing several scenes and pressing the
-shoot button only at the end)
-{: .challenge}</p>
+<div class="admonition-you-can-give-a-custom-title challenge admonition">
+<p class="admonition-title">You can give a custom title</p>
+<p>This is an exercise</p>
+</div>
+<div class="admonition-solution solution admonition">
+<p class="admonition-title">Solution</p>
+<p>This is a solution</p>
+</div>
+</div>
+<div class="section" id="wrap-up">
+<h2>Wrap-up<a class="headerlink" href="#wrap-up" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-challenge challenge admonition">
+<p class="admonition-title">Challenge</p>
+<p>These are the final summative exercises to test your
+understanding.</p>
+</div>
+<div class="admonition-keypoints keypoints admonition">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Key point 1</p></li>
+<li><p>Key point 2</p></li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -221,7 +247,7 @@ shoot button only at the end)
         <a href="../04_executing/" class="btn btn-neutral float-right" title="Try executing code cells in markdown" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../02_episode_rst/" class="btn btn-neutral float-left" title="ReST example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../02_episode_rst/" class="btn btn-neutral float-left" title="ReST episode example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
