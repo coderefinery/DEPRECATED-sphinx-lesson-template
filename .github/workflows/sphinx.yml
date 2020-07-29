@@ -48,7 +48,11 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         run: |
           set -x
-          find _gh-pages/ ! -mindepth 1 -path '_gh-pages/branch*' -delete
+          # Delete everything under _gh-pages/ that is from the
+          # primary branch deployment.  Eicludes the other branches
+          # _gh-pages/branch-* paths, and not including
+          # _gh-pages itself.
+          find _gh-pages/ -mindepth 1 ! -path '_gh-pages/branch*' -delete
           rsync -a _build/dirhtml/ _gh-pages/
       - name: Copy new build (branch)
         if: ${{ github.ref != 'refs/heads/master' }}
