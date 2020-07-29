@@ -58,16 +58,18 @@ jobs:
         if: ${{ github.ref != 'refs/heads/master' }}
         run: |
           set -x
-          rm -rf   _gh-pages/branch/$(git rev-parse --abbrev-ref HEAD)
-          mkdir -p _gh-pages/branch/$(git rev-parse --abbrev-ref HEAD)
-          rsync -a _build/dirhtml/ _gh-pages/branch/$(git rev-parse --abbrev-ref HEAD)
+          brname=$(git rev-parse --abbrev-ref HEAD)
+          brdir=${brname//\//--}   # replace '/' with '--'
+          rm -rf   _gh-pages/branch/${brdir}
+          rsync -a _build/dirhtml/ _gh-pages/branch/${brdir}
       - name: Delete old feature branches
         run: |
           set -x
-          for brname in `ls _gh-pages/branch/` ; do
+          for brdir in `ls _gh-pages/branch/` ; do
+              brname=${brname//--/\/}   # replace '--' with '/'
               if ! git show-ref remotes/origin/$brname ; then
-                  echo "Removing $brname"
-                  rm -r _gh-pages/branch/$brname/
+                  echo "Removing $brdir"
+                  rm -r _gh-pages/branch/$brdir/
               fi
           done
 
