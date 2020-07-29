@@ -54,7 +54,8 @@ jobs:
         if: ${{ github.ref != 'refs/heads/master' }}
         run: |
           set -x
-          rm -rf _gh-pages/branch/$(git rev-parse --abbrev-ref HEAD)
+          rm -rf   _gh-pages/branch/$(git rev-parse --abbrev-ref HEAD)
+          mkdir -p _gh-pages/branch/$(git rev-parse --abbrev-ref HEAD)
           rsync -a _build/dirhtml/ _gh-pages/branch/$(git rev-parse --abbrev-ref HEAD)
       - name: Delete old feature branches
         run: |
