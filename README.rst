@@ -1,11 +1,15 @@
-Sphinx-lesson template and demo
+Deprecated Sphinx-lesson template and demo
 ===============================
+
+> New demo and template are : https://github.com/coderefinery/sphinx-lesson-template and https://github.com/coderefinery/sphinx-lesson
 
 This is a demo for the sphinx-lesson style, and also a template which
 can be used for creating new lessons.
 
 `View it on github pages
 <https://coderefinery.github.io/sphinx-lesson-template/>`__.
+
+
 
 Features
 --------
